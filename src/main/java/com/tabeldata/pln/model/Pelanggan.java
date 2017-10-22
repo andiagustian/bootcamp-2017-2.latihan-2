@@ -5,7 +5,6 @@
  */
 package com.tabeldata.pln.model;
 
-import java.math.BigDecimal;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
@@ -20,11 +19,10 @@ import lombok.NoArgsConstructor;
 @Entity
 @Table(name="pelanggan")
 public class Pelanggan {
+    
     @Id
     @GeneratedValue
-    private Integer Id;
-    private Integer namaPelanggan;
-    private BigDecimal saldo;
-    private BigDecimal token;
-    
+    private Integer id;
+    private String nama;
+    private Long saldo;
 }
