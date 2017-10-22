@@ -23,13 +23,6 @@ import org.springframework.security.provisioning.InMemoryUserDetailsManager;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
     
-//    @Bean
-//    @Autowired
-//    public UserDetailsService userDetailService(PasswordEncoder passwordEncoder){
-//        InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-//        manager.createUser(User.withUsername("admin").password(passwordEncoder.encode("admin")).roles("ADMIN").build());
-//        return manager;
-//    }
     @Override
     protected void configure(HttpSecurity http) throws Exception{
         http.csrf().disable()
