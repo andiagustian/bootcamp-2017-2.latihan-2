@@ -5,7 +5,7 @@
  */
 package com.tabeldata.pln.repository;
 
-import com.example.TokenListrikPLN.model.Pelanggan;
+import com.tabeldata.pln.model.Pelanggan;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
