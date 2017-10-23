@@ -12,13 +12,13 @@
               <a href="#" class="brand-logo">Logo</a>
               <ul id="nav-mobile" class="right hide-on-med-and-down">
                 <li><a href="/token/new" th:href="@{/token/new}">Token Baru</a></li>
-                <li><a href="/token/" th:href="@{/token/}" sec:authorize="hasRole('ADMIN')">Daftar Token</a></li>
-                <li><a href="/token/new" th:href="@{/token/new}">Transaksi</a></li>
-                <li><a href="/token/" th:href="@{/token/}">Lihat Transaksi</a></li>
-                <li><a href="/token/new" th:href="@{/token/new}" sec:authorize="hasRole('ADMIN')">Tambah Pelanggan</a></li>
-                <li><a href="/token/" th:href="@{/token/}">Pelanggan</a></li>
+                <li><a href="/token/list" th:href="@{/token/list}" sec:authorize="hasRole('ADMIN')">Daftar Token</a></li>
+                <li><a href="/transaksi/new" th:href="@{/transaksi/new}">Transaksi</a></li>
+                <li><a href="/transaksi/" th:href="@{/transaksi/}">Lihat Transaksi</a></li>
+                <li><a href="/pelanggan/new" th:href="@{/pelanggam/new}" sec:authorize="hasRole('ADMIN')">Tambah Pelanggan</a></li>
+                <li><a href="/pelanggan/" th:href="@{/pelanggan/}">Daftar Pelanggan</a></li>
                 <li><a href="/login-form" th:href="@{/login-form}">Login</a></li>
-                <li><a href="/logout" th:href="@{/logout}">Logout</a></li>
+                <li><a href="/logout" th:href="@{/logout}" sec:authorize="isAuthenticated()">Logout</a></li>
               </ul>
             </div>
           </nav>
