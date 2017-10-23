@@ -21,7 +21,6 @@ import lombok.NoArgsConstructor;
 public class Pelanggan {
     
     @Id
-    @GeneratedValue
     private Integer id;
     private String nama;
     private Long saldo;
