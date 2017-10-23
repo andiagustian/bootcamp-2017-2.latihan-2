@@ -6,6 +6,21 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js" th:src="@{/webjars/materializecss/0.100.2/js/materialize.min.js}"></script>
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
     </head>
+    <nav>
+            <div class="nav-wrapper">
+              <a href="#" class="brand-logo">Logo</a>
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="/token/new" th:href="@{/token/new}">Token Baru</a></li>
+                <li><a href="/token/list" th:href="@{/token/list}" sec:authorize="hasRole('ADMIN')">Daftar Token</a></li>
+                <li><a href="/transaksi/new" th:href="@{/transaksi/new}">Transaksi</a></li>
+                <li><a href="/transaksi/" th:href="@{/transaksi/}">Lihat Transaksi</a></li>
+                <li><a href="/pelanggan/new" th:href="@{/pelanggam/new}" sec:authorize="hasRole('ADMIN')">Tambah Pelanggan</a></li>
+                <li><a href="/pelanggan/" th:href="@{/pelanggan/}">Daftar Pelanggan</a></li>
+                <li><a href="/login-form" th:href="@{/login-form}">Login</a></li>
+                <li><a href="/logout" th:href="@{/logout}" sec:authorize="isAuthenticated()">Logout</a></li>
+              </ul>
+            </div>
+          </nav>
     <body>
         <div class="container">
         <table class="bordered">
