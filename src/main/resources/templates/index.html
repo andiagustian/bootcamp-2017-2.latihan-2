@@ -22,12 +22,12 @@
               </ul>
             </div>
           </nav>
-        <div>
-        Halaman Utama
+        <div class="container">
+            <h1>Halaman Utama</h1>
         <div sec:authorize="isAuthenticated()">
             <!--yang tampil udah login-->
-            Nama User yang login: <p sec:authentication="name">User</p><br/>
-            Rolenya:<p sec:authentication="authorities">ROLE_USER</p>
+            Username anda: <p sec:authentication="name">User</p><br/>
+            Sebagai:<p sec:authentication="authorities">ROLE_USER</p>
         </div>
         </div>
 
