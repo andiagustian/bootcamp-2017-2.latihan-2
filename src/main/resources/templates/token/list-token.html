@@ -7,6 +7,26 @@
         <script src="https://code.jquery.com/jquery-3.2.1.min.js" th:src="@{/webjars/jquery/3.2.1/jquery.min.js}"></script>
     </head>
     <body>
-        <div>TODO write content</div>
+        <div class="container">
+        <table class="bordered">
+            <thead>
+                <tr>
+                    <td>Kode</td>
+                    <td>Nama Produk</td>
+                    <td>Harga</td>
+                    <td>Aksi</td>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="t:${lstToken}">
+                    <td th:text="${t.kode}">20</td>
+                    <td th:text="${t.nama}">20000</td>
+                    <td th:text="${t.harga}">21000</td>
+                    <td><span sec:authorize="hasRole('ROLE_ADMIN')"><a href="/token/update/1" th:href="@{/token/update(id=${t.id})}" class="btn"> Update</a>|<a href="/token/delete/1" th:href="@{/token/delete(id=${t.id})}" class="btn">Delete</a></span></td>
+                </tr>
+            </tbody>
+        </table>
+        </div>
     </body>
+
 </html>
