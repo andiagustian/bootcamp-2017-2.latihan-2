@@ -37,7 +37,7 @@
                     <td th:text="${t.kode}">20</td>
                     <td th:text="${t.nama}">20000</td>
                     <td th:text="${t.harga}">21000</td>
-                    <td><span sec:authorize="hasRole('ROLE_ADMIN')"><a href="/token/update/1" th:href="@{/token/update(id=${t.id})}" class="btn"> Update</a>|<a href="/token/delete/1" th:href="@{/token/delete(id=${t.id})}" class="btn">Delete</a></span></td>
+                    <td><span sec:authorize="hasRole('ROLE_ADMIN')"><a href="/token/update/1" th:href="@{/token/update(kode=${t.kode})}" class="btn"> Update</a>|<a href="/token/delete/1" th:href="@{/token/delete(kode=${t.kode})}" class="btn">Delete</a></span></td>
                 </tr>
             </tbody>
         </table>
