@@ -16,7 +16,9 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -52,14 +54,15 @@ public class TokenController {
     }
     
     @GetMapping("/delete")
-    public String deleteToken(@RequestParam(name="id", required=true)Token token){
+    public String deleteToken(@RequestParam(name="kode", required=true)Token token){
         tokenRepository.delete(token);
         return "redirect:/token/list";
     }
     
     @GetMapping("/update")
-    public String updateToken(Authentication auth, @RequestParam(name="id", required=true) Token token, Model model){
+    public String tokenById(@RequestParam(name="kode", required = true)Token token, Model model){
         model.addAttribute("tkn", token);
         return "/token/update-token";
     }
+    
 }
