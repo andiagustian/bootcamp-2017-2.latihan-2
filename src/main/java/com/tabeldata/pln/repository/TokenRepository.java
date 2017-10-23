@@ -6,6 +6,7 @@
 package com.tabeldata.pln.repository;
 
 import com.tabeldata.pln.model.Token;
+import java.util.List;
 import org.springframework.data.repository.PagingAndSortingRepository;
 
 /**
@@ -13,5 +14,5 @@ import org.springframework.data.repository.PagingAndSortingRepository;
  * @author USER
  */
 public interface TokenRepository extends PagingAndSortingRepository<Token, Integer>{
-    
+    List<Token> findAll();
 }
